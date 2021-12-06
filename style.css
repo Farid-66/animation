@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+div {
+  width: 160px;
+  height: 360px;
+  margin: 80px  auto;
+  border: 1px solid black;
+  padding: 20px;
+}
+
+div .box {
+  width: 80px;
+  height: 80px;
+  background-color: #e96a6a;
+  border: none;
+  position: relative;
+  -webkit-transition: .5s;
+  transition: .5s;
+  margin-top: 200px;
+}
+
+div .box span {
+  display: block;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border: 5px solid #e96a6a;
+  top: 15px;
+  right: -15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+@-webkit-keyframes box_animation1 {
+  from {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  to {
+    -webkit-transform: translateY(-60px);
+            transform: translateY(-60px);
+  }
+}
+
+@keyframes box_animation1 {
+  from {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  to {
+    -webkit-transform: translateY(-60px);
+            transform: translateY(-60px);
+  }
+}
+
+div:hover span {
+  right: 0;
+  top: 0;
+}
+
+div:hover .box {
+  -webkit-transform: translateY(15px);
+          transform: translateY(15px);
+  -webkit-animation-name: box_animation1;
+          animation-name: box_animation1;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-timing-function: step-start;
+          animation-timing-function: step-start;
+}
+
+div:hover .box {
+  -webkit-transform: translateY(15px);
+          transform: translateY(15px);
+  -webkit-animation-name: box_animation2;
+          animation-name: box_animation2;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-timing-function: step-start;
+          animation-timing-function: step-start;
+}
+/*# sourceMappingURL=style.css.map */

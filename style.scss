@@ -1,0 +1,66 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+div{
+    width: 160px;
+    height: 360px;
+    margin: 80px  auto;
+    border: 1px solid black;
+    padding: 20px;
+    .box{
+        width: 80px;
+        height: 80px;
+        background-color: rgb(233, 106, 106);
+        border: none;
+        position: relative;
+        transition: .5s;
+        margin-top: 200px;
+        span{
+            display: block;
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border: 5px solid rgb(233, 106, 106);
+            top: 15px;
+            right: -15px;
+            box-sizing: border-box;
+            transition: .5s;
+        }
+    }
+}
+
+@keyframes box_animation1{
+    from{
+
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(-60px);
+    }
+}
+
+div:hover span{
+    right: 0;
+    top: 0;
+}
+div:hover .box{
+    transform: translateY(15px);
+    animation-name: box_animation1;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-timing-function: step-start;
+}
+
+div:hover .box{
+    transform: translateY(15px);
+    animation-name: box_animation2;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-timing-function: step-start;
+}
